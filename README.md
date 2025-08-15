@@ -148,6 +148,8 @@ EOL
 pip3 install pandas numpy plotly
 python3 generate_report.py
 open inventory_analysis_report.html
+
+## Results 
 <img width="452" height="257" alt="image" src="https://github.com/user-attachments/assets/c280f2c9-04ad-4447-88d9-cec4a24fcaf2" />
 <img width="452" height="259" alt="image" src="https://github.com/user-attachments/assets/e56795ba-21d0-43b4-8a38-dad98d1aadec" />
 <img width="452" height="259" alt="image" src="https://github.com/user-attachments/assets/1c05ccdd-8f7e-4362-b56c-68ed8486e15c" />
@@ -155,6 +157,37 @@ open inventory_analysis_report.html
 <img width="452" height="261" alt="image" src="https://github.com/user-attachments/assets/74808ac9-be13-4311-a6e2-ca87adf41d23" />
 <img width="452" height="260" alt="image" src="https://github.com/user-attachments/assets/2a9ae28d-3200-4293-822f-4854e39d0003" />
 
+
+
+## Terminal Command(Windows)
+cd path\to\hul_inventory_analysis || exit
+
+:: Ignore HTML files (if any)
+echo *.html > .gitignore 2>nul
+
+:: Initialize Git if not already
+git init 2>nul
+
+:: Stage all files
+git add . 2>nul
+
+:: Commit changes (ignore error if no changes)
+git commit -m "Initial commit: Safety Stock & Reorder Point Analysis project" 2>nul
+
+:: Set branch to main
+git branch -M main 2>nul
+
+:: Add remote if not already
+git remote add origin https://github.com/gyanes-09/Safety-Stock-Reorder-Point-Analysis-Report.git 2>nul
+
+:: Push to GitHub
+git push -u origin main 2>nul
+
+:: Install dependencies (ignore if already installed)
+pip install pandas numpy --quiet
+
+:: Run Python script
+python generate_report.py || echo "Python script failed. Check your setup."
 
 
 
